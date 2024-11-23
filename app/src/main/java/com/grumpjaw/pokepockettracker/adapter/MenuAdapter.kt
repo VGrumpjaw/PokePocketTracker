@@ -9,7 +9,9 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.grumpjaw.pokepockettracker.R
 
-class MenuAdapter : ListAdapter<String, MenuAdapter.MenuViewHolder>(DIFF_CALLBACK) {
+class MenuAdapter(
+    private val clickListener: (String) -> Unit,
+) : ListAdapter<String, MenuAdapter.MenuViewHolder>(DIFF_CALLBACK) {
     companion object {
         private val DIFF_CALLBACK =
             object : DiffUtil.ItemCallback<String>() {
@@ -37,7 +39,7 @@ class MenuAdapter : ListAdapter<String, MenuAdapter.MenuViewHolder>(DIFF_CALLBAC
         holder: MenuViewHolder,
         position: Int,
     ) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), clickListener)
     }
 
     class MenuViewHolder(
@@ -45,8 +47,12 @@ class MenuAdapter : ListAdapter<String, MenuAdapter.MenuViewHolder>(DIFF_CALLBAC
     ) : RecyclerView.ViewHolder(view) {
         private val textView: TextView = view.findViewById(R.id.textView)
 
-        fun bind(item: String) {
+        fun bind(
+            item: String,
+            clickListener: (String) -> Unit,
+        ) {
             textView.text = item
+            textView.setOnClickListener { clickListener(item) }
         }
     }
 }

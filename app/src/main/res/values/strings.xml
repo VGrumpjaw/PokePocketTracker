@@ -5,4 +5,6 @@
         <item>デッキ（未実装）</item>
         <item>コレクション（未実装）</item>
     </string-array>
+    <string name="main_menu_text">メインメニュー</string>
+    <string name="score_screen_text">戦績</string>
 </resources>

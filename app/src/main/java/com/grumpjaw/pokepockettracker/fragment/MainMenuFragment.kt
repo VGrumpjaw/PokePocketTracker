@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.grumpjaw.pokepockettracker.R
@@ -30,7 +31,13 @@ class MainMenuFragment : Fragment() {
         val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        val adapter = MenuAdapter()
+        val adapter =
+            MenuAdapter { menuItem ->
+                when (menuItem) {
+                    "戦績" -> findNavController().navigate(R.id.action_mainMenuFragment_to_scoreFragment)
+                    // 他のメニュー項目の処理を追加
+                }
+            }
         recyclerView.adapter = adapter
 
         viewModel.menuItems.observe(viewLifecycleOwner) { items ->
