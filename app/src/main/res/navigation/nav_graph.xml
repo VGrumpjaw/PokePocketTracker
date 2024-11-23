@@ -18,5 +18,24 @@
         android:id="@+id/scoreFragment"
         android:name="com.grumpjaw.pokepockettracker.fragment.ScoreFragment"
         android:label="@string/score_screen_text"
-        tools:layout="@layout/fragment_score" />
+        tools:layout="@layout/fragment_score" >
+        <action
+            android:id="@+id/action_scoreFragment_to_scoreRecordFragment"
+            app:destination="@id/scoreRecordFragment" />
+        <action
+            android:id="@+id/action_scoreFragment_to_scoreDisplayFragment"
+            app:destination="@id/scoreDisplayFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scoreRecordFragment"
+        android:name="com.grumpjaw.pokepockettracker.fragment.ScoreRecordFragment"
+        android:label="@string/score_record_text"
+        tools:layout="@layout/fragment_score_record" />
+
+    <fragment
+        android:id="@+id/scoreDisplayFragment"
+        android:name="com.grumpjaw.pokepockettracker.fragment.ScoreDisplayFragment"
+        android:label="@string/score_display_text"
+        tools:layout="@layout/fragment_score_display" />
 </navigation>

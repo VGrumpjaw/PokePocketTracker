@@ -7,4 +7,10 @@
     </string-array>
     <string name="main_menu_text">メインメニュー</string>
     <string name="score_screen_text">戦績</string>
+    <string name="score_record_text">戦績記録</string>
+    <string name="score_display_text">戦績表示</string>
+    <string-array name="score_menu_items">
+        <item>戦績記録</item>
+        <item>戦績表示</item>
+    </string-array>
 </resources>
