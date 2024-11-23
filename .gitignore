@@ -1,0 +1,12 @@
+# JetBrains系IDE（IntelliJ IDEAなど）が生成するプロジェクト設定ファイル
+.idea/
+
+# Gradleビルドの出力ディレクトリ
+/build/
+
+# ローカルのGradleキャッシュディレクトリ
+.gradle/
+
+# IDE固有の設定ファイルや一時ファイル
+*.iml
+*.
