@@ -1,11 +1,144 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Spinner
+        android:id="@+id/my_deck_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:prompt="@string/select_my_deck"
+        android:entries="@array/my_deck_list" />
 
     <TextView
-        android:id="@+id/recordText"
+        android:id="@+id/opponent_deck_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/score_record_text"
-        android:layout_centerInParent="true"/>
+        android:layout_below="@id/my_deck_spinner"
+        android:text="@string/select_opponent_deck"
+        android:layout_marginBottom="8dp"/>
+
+    <LinearLayout
+        android:id="@+id/opponent_deck_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/opponent_deck_label"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <ToggleButton
+            android:id="@+id/deck_button_grass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+        <ToggleButton
+            android:id="@+id/deck_button_fire"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+        <ToggleButton
+            android:id="@+id/deck_button_water"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+        <ToggleButton
+            android:id="@+id/deck_button_electic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+        <ToggleButton
+            android:id="@+id/deck_button_psychic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+        <ToggleButton
+            android:id="@+id/deck_button_fighting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+
+        <ToggleButton
+            android:id="@+id/deck_button_dark"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+        <ToggleButton
+            android:id="@+id/deck_button_steel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+        <ToggleButton
+            android:id="@+id/deck_button_dragon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+        <ToggleButton
+            android:id="@+id/deck_button_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textOff="@string/unused"
+            android:textOn="@string/used" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/win_lose_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/opponent_deck_buttons"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/win_radio_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/win" />
+
+        <RadioButton
+            android:id="@+id/lose_radio_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/lose" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/win_lose_radio_group"
+        android:layout_centerHorizontal="true"
+        android:text="@string/save" />
 </RelativeLayout>

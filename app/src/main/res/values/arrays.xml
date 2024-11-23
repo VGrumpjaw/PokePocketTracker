@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="my_deck_list">
+        <item>ピカチュウEX</item>
+        <item>スターミーEX</item>
+        <item>ミュウツーEX</item>
+    </string-array>
+</resources>
