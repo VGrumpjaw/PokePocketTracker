@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId = "com.grumpjaw.pokepockettracker"
-        minSdk = 24
+        minSdk = 25
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
@@ -46,7 +46,11 @@ dependencies {
     implementation(libs.androidx.recyclerview.v121)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.androidx.room.common)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.compose.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    annotationProcessor(libs.androidx.room.compiler)
 }
