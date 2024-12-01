@@ -34,8 +34,11 @@ class ScoreFragment : Fragment() {
         val adapter =
             MenuAdapter { menuItem ->
                 when (menuItem) {
-                    "戦績記録" -> findNavController().navigate(R.id.action_scoreFragment_to_scoreRecordFragment)
-                    "戦績表示" -> findNavController().navigate(R.id.action_scoreFragment_to_scoreDisplayFragment)
+                    getString(R.string.score_record_text) -> findNavController().navigate(R.id.action_scoreFragment_to_scoreRecordFragment)
+                    getString(
+                        R.string.score_display_text,
+                    ),
+                    -> findNavController().navigate(R.id.action_scoreFragment_to_scoreDisplayFragment)
                 }
             }
         recyclerView.adapter = adapter
