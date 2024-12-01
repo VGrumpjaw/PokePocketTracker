@@ -14,10 +14,10 @@
         <item>戦績表示</item>
     </string-array>
     <string name="select_my_deck">自分の使用デッキを選択</string>
-    <string name="select_opponent_deck">相手の使用デッキタイプを選択</string>
+    <string name="select_opponent_deck">相手の使用デッキを選択</string>
     <string name="win">勝ち</string>
     <string name="lose">負け</string>
     <string name="save">登録</string>
-    <string name="unused">未使用</string>
-    <string name="used">使用</string>
+    <string name="first_turn">先行</string>
+    <string name="second_turn">後攻</string>
 </resources>

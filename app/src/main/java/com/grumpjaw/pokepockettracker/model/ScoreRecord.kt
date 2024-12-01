@@ -1,4 +1,4 @@
-package com.grumpjaw.pokepockettracker.database
+package com.grumpjaw.pokepockettracker.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

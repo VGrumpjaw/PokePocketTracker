@@ -1,8 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="my_deck_list">
-        <item>ピカチュウEX</item>
-        <item>スターミーEX</item>
-        <item>ミュウツーEX</item>
+        <item>ピカチュウex</item>
+        <item>スターミーex</item>
+        <item>ミュウツーex</item>
+        <item>リザードンex</item>
+        <item>フシギバナex</item>
+        <item>ガラガラex</item>
+        <item>カイリュー</item>
+        <item>メルメタル</item>
+        <item>草デッキ</item>
+        <item>炎デッキ</item>
+        <item>水デッキ</item>
+        <item>超デッキ</item>
+        <item>闘デッキ</item>
+        <item>悪デッキ</item>
+        <item>鋼デッキ</item>
+        <item>無デッキ</item>
+    </string-array>
+    <string-array name="opponent_deck_list">
+        <item>ピカチュウex</item>
+        <item>スターミーex</item>
+        <item>ミュウツーex</item>
+        <item>リザードンex</item>
+        <item>フシギバナex</item>
+        <item>ガラガラex</item>
+        <item>カイリュー</item>
+        <item>メルメタル</item>
+        <item>草デッキ</item>
+        <item>炎デッキ</item>
+        <item>水デッキ</item>
+        <item>超デッキ</item>
+        <item>闘デッキ</item>
+        <item>悪デッキ</item>
+        <item>鋼デッキ</item>
+        <item>無デッキ</item>
     </string-array>
 </resources>
