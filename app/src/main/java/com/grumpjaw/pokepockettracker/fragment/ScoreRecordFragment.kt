@@ -7,11 +7,16 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Spinner
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.grumpjaw.pokepockettracker.R
 import com.grumpjaw.pokepockettracker.model.ScoreRecord
 import com.grumpjaw.pokepockettracker.viewmodel.ScoreRecordViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class ScoreRecordFragment : Fragment() {
     private val viewModel: ScoreRecordViewModel by viewModels()
@@ -47,7 +52,22 @@ class ScoreRecordFragment : Fragment() {
                     isFirst = hasFirstTurn,
                     timestamp = System.currentTimeMillis(),
                 )
-            viewModel.insert(scoreRecord)
+
+            viewLifecycleOwner.lifecycleScope.launch {
+                try {
+                    withContext(Dispatchers.IO) {
+                        viewModel.insert(scoreRecord)
+                    }
+                    Toast.makeText(context, "戦績の登録が完了しました", Toast.LENGTH_SHORT).show()
+                } catch (e: Exception) {
+                    Toast
+                        .makeText(
+                            context,
+                            "戦績の登録に失敗しました: ${e.message}",
+                            Toast.LENGTH_SHORT,
+                        ).show()
+                }
+            }
         }
     }
 }
