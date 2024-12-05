@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
         android:text="@string/select_my_deck" />
 
     <Spinner
@@ -26,46 +27,135 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/my_deck_spinner"
         android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
         android:text="@string/select_opponent_deck" />
 
-    <Spinner
-        android:id="@+id/opponent_deck_spinner"
+    <LinearLayout
+        android:id="@+id/type_row_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/opponent_deck_label"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox_grass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grass" />
+
+        <CheckBox
+            android:id="@+id/checkbox_fire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fire" />
+
+        <CheckBox
+            android:id="@+id/checkbox_water"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/water" />
+
+        <CheckBox
+            android:id="@+id/checkbox_electric"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/electric" />
+
+        <CheckBox
+            android:id="@+id/checkbox_psychic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/psychic" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/type_row_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/type_row_1"
+        android:orientation="horizontal"
         android:layout_marginBottom="16dp"
-        android:entries="@array/opponent_deck_list"
-        android:prompt="@string/select_opponent_deck" />
+        android:gravity="center_horizontal">
+
+        <CheckBox
+            android:id="@+id/checkbox_fighting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/fighting" />
+
+        <CheckBox
+            android:id="@+id/checkbox_dark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dark" />
+
+        <CheckBox
+            android:id="@+id/checkbox_steel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/steel" />
+
+        <CheckBox
+            android:id="@+id/checkbox_dragon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dragon" />
+
+        <CheckBox
+            android:id="@+id/checkbox_normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/normal" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/checkbox_group"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/opponent_deck_spinner"
+        android:layout_below="@id/type_row_2"
         android:layout_marginBottom="16dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
 
         <CheckBox
             android:id="@+id/win_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="@string/win" />
+            android:text="@string/win"
+            android:layout_marginEnd="16dp" />
 
         <CheckBox
             android:id="@+id/first_turn_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:text="@string/first_turn" />
+            android:text="@string/first_turn"
+            android:layout_marginEnd="16dp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/save_button"
+    <LinearLayout
+        android:id="@+id/button_container"
+        style="?android:attr/buttonBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/checkbox_group"
         android:layout_centerHorizontal="true"
-        android:text="@string/save" />
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/save_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/clear_button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/clear" />
+    </LinearLayout>
 </RelativeLayout>

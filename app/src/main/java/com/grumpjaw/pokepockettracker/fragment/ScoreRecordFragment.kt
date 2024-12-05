@@ -34,23 +34,53 @@ class ScoreRecordFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val myDeckSpinner: Spinner = view.findViewById(R.id.my_deck_spinner)
-        val opponentDeckSpinner: Spinner = view.findViewById(R.id.opponent_deck_spinner)
+        val grassCheckBox: CheckBox = view.findViewById(R.id.checkbox_grass)
+        val fireCheckBox: CheckBox = view.findViewById(R.id.checkbox_fire)
+        val waterCheckBox: CheckBox = view.findViewById(R.id.checkbox_water)
+        val electricCheckBox: CheckBox = view.findViewById(R.id.checkbox_electric)
+        val psychicCheckBox: CheckBox = view.findViewById(R.id.checkbox_psychic)
+        val fightingCheckBox: CheckBox = view.findViewById(R.id.checkbox_fighting)
+        val darkCheckBox: CheckBox = view.findViewById(R.id.checkbox_dark)
+        val steelCheckBox: CheckBox = view.findViewById(R.id.checkbox_steel)
+        val dragonCheckBox: CheckBox = view.findViewById(R.id.checkbox_dragon)
+        val normalCheckBox: CheckBox = view.findViewById(R.id.checkbox_normal)
         val winCheckBox: CheckBox = view.findViewById(R.id.win_checkbox)
         val firstTurnCheckBox: CheckBox = view.findViewById(R.id.first_turn_checkbox)
         val saveButton: Button = view.findViewById(R.id.save_button)
+        val clearButton: Button = view.findViewById(R.id.clear_button)
 
         saveButton.setOnClickListener {
             val selectedMyDeck = myDeckSpinner.selectedItem.toString()
-            val selectedOpponentDeck = opponentDeckSpinner.selectedItem.toString()
-            val hasWon = winCheckBox.isChecked
-            val hasFirstTurn = firstTurnCheckBox.isChecked
+            val containsGrassType = grassCheckBox.isChecked
+            val containsWaterType = waterCheckBox.isChecked
+            val containsFireType = fireCheckBox.isChecked
+            val containsElectricType = electricCheckBox.isChecked
+            val containsPsychicType = psychicCheckBox.isChecked
+            val containsFightingType = fightingCheckBox.isChecked
+            val containsDarkType = darkCheckBox.isChecked
+            val containsSteelType = steelCheckBox.isChecked
+            val containsDragonType = dragonCheckBox.isChecked
+            val containsNormalType = normalCheckBox.isChecked
+            val isWin = winCheckBox.isChecked
+            val isFirstTurn = firstTurnCheckBox.isChecked
+
             val scoreRecord =
                 ScoreRecord(
-                    myDeck = selectedMyDeck,
-                    opponentDeck = selectedOpponentDeck,
-                    hasWon = hasWon,
-                    isFirst = hasFirstTurn,
-                    timestamp = System.currentTimeMillis(),
+                    0,
+                    selectedMyDeck,
+                    containsGrassType,
+                    containsWaterType,
+                    containsFireType,
+                    containsElectricType,
+                    containsPsychicType,
+                    containsFightingType,
+                    containsDarkType,
+                    containsSteelType,
+                    containsDragonType,
+                    containsNormalType,
+                    isWin,
+                    isFirstTurn,
+                    System.currentTimeMillis(),
                 )
 
             viewLifecycleOwner.lifecycleScope.launch {
@@ -68,6 +98,21 @@ class ScoreRecordFragment : Fragment() {
                         ).show()
                 }
             }
+        }
+
+        clearButton.setOnClickListener {
+            grassCheckBox.isChecked = false
+            fireCheckBox.isChecked = false
+            waterCheckBox.isChecked = false
+            electricCheckBox.isChecked = false
+            psychicCheckBox.isChecked = false
+            fightingCheckBox.isChecked = false
+            darkCheckBox.isChecked = false
+            steelCheckBox.isChecked = false
+            dragonCheckBox.isChecked = false
+            normalCheckBox.isChecked = false
+            winCheckBox.isChecked = false
+            firstTurnCheckBox.isChecked = false
         }
     }
 }

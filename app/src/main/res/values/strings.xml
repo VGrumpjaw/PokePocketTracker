@@ -14,10 +14,19 @@
         <item>戦績表示</item>
     </string-array>
     <string name="select_my_deck">自分の使用デッキを選択</string>
-    <string name="select_opponent_deck">相手の使用デッキを選択</string>
+    <string name="select_opponent_deck">相手の使用デッキタイプを選択</string>
     <string name="win">勝ち</string>
-    <string name="lose">負け</string>
-    <string name="save">登録</string>
     <string name="first_turn">先行</string>
-    <string name="second_turn">後攻</string>
+    <string name="save">登録</string>
+    <string name="clear">クリア</string>
+    <string name="grass">草</string>
+    <string name="fire">炎</string>
+    <string name="water">水</string>
+    <string name="electric">電</string>
+    <string name="psychic">超</string>
+    <string name="fighting">闘</string>
+    <string name="dark">悪</string>
+    <string name="steel">鋼</string>
+    <string name="dragon">竜</string>
+    <string name="normal">普</string>
 </resources>
