@@ -5,17 +5,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.grumpjaw.pokepockettracker.R
 import com.grumpjaw.pokepockettracker.adapter.MenuAdapter
-import com.grumpjaw.pokepockettracker.viewmodel.MainMenuViewModel
 
 class ScoreFragment : Fragment() {
-    private val viewModel: MainMenuViewModel by viewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- メインメニューの項目 -->
+    <string-array name="menu_items">
+        <item>戦績</item>
+        <item>デッキ（未実装）</item>
+        <item>コレクション（未実装）</item>
+    </string-array>
+
+    <!-- 戦績メニューの項目 -->
+    <string-array name="score_menu_items">
+        <item>戦績記録</item>
+        <item>戦績表示</item>
+    </string-array>
+
+    <!-- 自分の使用デッキのリスト（仮） -->
     <string-array name="my_deck_list">
         <item>ピカチュウex</item>
         <item>ミュウツーex</item>

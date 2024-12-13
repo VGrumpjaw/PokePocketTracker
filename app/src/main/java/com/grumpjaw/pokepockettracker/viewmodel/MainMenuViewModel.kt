@@ -18,7 +18,8 @@ class MainMenuViewModel(
     }
 
     private fun loadMenuItems() {
-        val menuItemsArray = getApplication<Application>().resources.getStringArray(R.array.menu_items)
+        val menuItemsArray =
+            getApplication<Application>().resources.getStringArray(R.array.menu_items)
         _menuItems.value = menuItemsArray.toList()
     }
 }

@@ -15,6 +15,7 @@ import com.grumpjaw.pokepockettracker.viewmodel.MainMenuViewModel
 
 class MainMenuFragment : Fragment() {
     private val viewModel: MainMenuViewModel by viewModels()
+    private lateinit var recyclerView: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -27,21 +28,27 @@ class MainMenuFragment : Fragment() {
         savedInstanceState: Bundle?,
     ) {
         super.onViewCreated(view, savedInstanceState)
+        setupRecyclerView(view)
+        observeMenuItems()
+    }
 
-        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerView)
+    private fun setupRecyclerView(view: View) {
+        recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
         val adapter =
             MenuAdapter { menuItem ->
                 when (menuItem) {
-                    "戦績" -> findNavController().navigate(R.id.action_mainMenuFragment_to_scoreFragment)
+                    getString(R.string.score_screen_text) -> findNavController().navigate(R.id.action_mainMenuFragment_to_scoreFragment)
                     // 他のメニュー項目の処理を追加
                 }
             }
         recyclerView.adapter = adapter
+    }
 
+    private fun observeMenuItems() {
         viewModel.menuItems.observe(viewLifecycleOwner) { items ->
-            adapter.submitList(items)
+            (recyclerView.adapter as MenuAdapter).submitList(items)
         }
     }
 }

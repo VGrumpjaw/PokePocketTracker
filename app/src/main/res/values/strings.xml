@@ -1,24 +1,28 @@
 <resources>
+    <!-- アプリケーション名 -->
     <string name="app_name">PokePocketTracker</string>
-    <string-array name="menu_items">
-        <item>戦績</item>
-        <item>デッキ（未実装）</item>
-        <item>コレクション（未実装）</item>
-    </string-array>
+
+    <!-- メインメニュー画面のテキスト -->
     <string name="main_menu_text">メインメニュー</string>
+
+    <!-- 戦績画面のテキスト -->
     <string name="score_screen_text">戦績</string>
     <string name="score_record_text">戦績記録</string>
     <string name="score_display_text">戦績表示</string>
-    <string-array name="score_menu_items">
-        <item>戦績記録</item>
-        <item>戦績表示</item>
-    </string-array>
+
+    <!-- デッキ選択のテキスト -->
     <string name="select_my_deck">自分の使用デッキを選択</string>
     <string name="select_opponent_deck">相手の使用デッキタイプを選択</string>
+
+    <!-- 戦闘結果のテキスト -->
     <string name="win">勝ち</string>
+    <string name="lose">負け</string>
     <string name="first_turn">先行</string>
+    <string name="second_turn">後攻</string>
     <string name="save">登録</string>
     <string name="clear">クリア</string>
+
+    <!-- タイプのテキスト -->
     <string name="grass">草</string>
     <string name="fire">炎</string>
     <string name="water">水</string>
