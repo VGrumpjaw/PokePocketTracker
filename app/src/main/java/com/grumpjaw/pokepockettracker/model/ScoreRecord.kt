@@ -35,5 +35,5 @@ data class ScoreRecord(
     @ColumnInfo(name = "is_first_turn")
     val isFirstTurn: Boolean,
     @ColumnInfo(name = "createAt")
-    val create: Long,
+    val createAt: Long,
 )

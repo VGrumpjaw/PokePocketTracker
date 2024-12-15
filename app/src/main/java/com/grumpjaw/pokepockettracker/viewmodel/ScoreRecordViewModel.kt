@@ -23,4 +23,10 @@ class ScoreRecordViewModel(
         viewModelScope.launch {
             repository.insert(scoreRecord)
         }
+
+    fun delete(scoreRecord: ScoreRecord) {
+        viewModelScope.launch {
+            repository.delete(scoreRecord)
+        }
+    }
 }

@@ -21,6 +21,13 @@
     <string name="second_turn">後攻</string>
     <string name="save">登録</string>
     <string name="clear">クリア</string>
+    <string name="undo">取消</string>
+    <string name="select_turn_and_outcome">先行・後攻と勝敗を選択してください</string>
+    <string name="score_record_success">戦績の登録が完了しました</string>
+    <string name="score_record_failure">戦績の登録に失敗しました: %1$s</string>
+    <string name="undo_success">直前の記録が正常に取り消されました</string>
+    <string name="undo_failure">取り消しに失敗しました: %1$s</string>
+    <string name="no_record_to_undo">取り消す記録がありません</string>
 
     <!-- タイプのテキスト -->
     <string name="grass">草</string>

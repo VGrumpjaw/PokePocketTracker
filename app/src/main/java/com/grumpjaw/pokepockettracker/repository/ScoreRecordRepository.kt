@@ -9,4 +9,8 @@ class ScoreRecordRepository(
     suspend fun insert(scoreRecord: ScoreRecord) {
         scoreRecordDao.insert(scoreRecord)
     }
+
+    suspend fun delete(scoreRecord: ScoreRecord) {
+        scoreRecordDao.delete(scoreRecord)
+    }
 }
